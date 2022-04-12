@@ -41,8 +41,9 @@ function functionColorsOnFiltersCustomApiWakko(selector,jsonColors){
         selectorColors.forEach(selectorColor=>{
             jsonColors.forEach(jsonColor=>{
                 if(jsonColor.name == selectorColor.innerText.split(" (")[0]){
-                    selectorColor.style.backgroundColor = jsonColor.backGround;
-                    //TODO: text-color !
+                    let span =  document.createElement("span");
+                    span.classList.add("checkbox-color");
+                    span.style.backgroundColor = jsonColor.backGround;
                 }
             })
         })
