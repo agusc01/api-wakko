@@ -12,19 +12,19 @@ function ajaxCustomApiWakko(url, cFunction) {
 }
 
 function functionColorsCustomApiWakko(xhttp) {
-    let jsonColorsCustomApiJson = JSON.parse(xhttp.response);
+    let response = JSON.parse(xhttp.response);
     //on products
-    functionColorsInProductCustomApiWakko("div a .btn-variant-content");
+    functionColorsInProductCustomApiWakko("div a .btn-variant-content",response );
 
     //on filters
-    functionColorsInProductCustomApiWakko("[data-store='filters-group'] label span.checkbox")
+    functionColorsInProductCustomApiWakko("[data-store='filters-group'] label span.checkbox",response );
 }
 
-function functionColorsInProductCustomApiWakko(selector){
+function functionColorsInProductCustomApiWakko(selector,jsonColors){
     try {
         let selectorColors = document.querySelectorAll(selector);
         selectorColors.forEach(selectorColor=>{
-            jsonColorsCustomApiJson.forEach(jsonColor=>{
+            jsonColors.forEach(jsonColor=>{
                 if(jsonColor.name == selectorColor.textContent){
                     selectorColor.style.backgroundColor = jsonColor.backGround;
                     //TODO: text-color !
