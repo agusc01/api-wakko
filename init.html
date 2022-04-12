@@ -1,5 +1,6 @@
 <script>
-    let headCustomApiWakko = document.querySelector("head");
-    let scriptCustomApiWakko = '<script src="https://agusc01.github.io/api-wakko/custom-api-wakko.js"></scr'+'ipt>';
-    head.append(scriptCustomApiWakko);
+    var bodyCustomApiWakko = document.querySelector("body");
+    var customScriptWakko = document.createElement("script")
+    customScriptWakko.setAttribute("src","https://agusc01.github.io/api-wakko/custom-api-wakko.js");
+    bodyCustomApiWakko.append(customScriptWakko);
 </script>
