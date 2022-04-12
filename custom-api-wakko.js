@@ -3,6 +3,7 @@ console.log("Working Custom API Wakko ! ...");
 let urlColorsCustomApiWakko = 'https://agusc01.github.io/api-wakko/colors-custom-api-wakko.json'
 // let urlColorsCustomApiWakko = './colors-custom-api-wakko.json'
 ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
+functionStayCenterPills();
  
 function ajaxCustomApiWakko(url, cFunction) {
     const xhttp = new XMLHttpRequest();
@@ -53,6 +54,12 @@ function functionColorsOnFiltersCustomApiWakko(selector,jsonColors){
     }
 }
 
-
+function functionStayCenterPills(){
+    try {
+        document.querySelector(".pills-container").classList.remove("text-left-xs")
+    } catch (error) {
+        console.warn(error)
+    }
+}
 
 
