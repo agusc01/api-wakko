@@ -1,7 +1,7 @@
 console.log("Working Custom API Wakko ! ...");
 
 var urlColorsCustomApiWakko = 'https://agusc01.github.io/api-wakko/colors-custom-api-wakko.json'
-var urlColorsCustomApiWakko = './colors-custom-api-wakko.json'
+// var urlColorsCustomApiWakko = './colors-custom-api-wakko.json'
 ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
  
 function ajaxCustomApiWakko(url, cFunction) {
