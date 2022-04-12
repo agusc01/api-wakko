@@ -44,6 +44,7 @@ function functionColorsOnFiltersCustomApiWakko(selector,jsonColors){
                     let span =  document.createElement("span");
                     span.classList.add("checkbox-color");
                     span.style.backgroundColor = jsonColor.backGround;
+                    selectorColor.append(span);
                 }
             })
         })
