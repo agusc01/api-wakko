@@ -25,6 +25,11 @@
     <h1>API - Wakko</h1>
     <!-- Put here init.html to testing ! -->
     <script>
+        var bodyCustomApiWakko = document.querySelector("body");
+        var customScriptWakko = document.createElement("script")
+        // customScriptWakko.setAttribute("src","https://agusc01.github.io/api-wakko/custom-api-wakko.js");
+        customScriptWakko.setAttribute("src","./custom-api-wakko.js");
+        bodyCustomApiWakko.append(customScriptWakko);
     </script>
 </body>
 </html>
