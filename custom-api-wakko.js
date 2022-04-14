@@ -4,6 +4,7 @@ let urlColorsCustomApiWakko = 'https://agusc01.github.io/api-wakko/colors-custom
 // let urlColorsCustomApiWakko = './colors-custom-api-wakko.json'
 ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
 functionStayCenterPills();
+bannerWrapper();
  
 function ajaxCustomApiWakko(url, cFunction) {
     const xhttp = new XMLHttpRequest();
