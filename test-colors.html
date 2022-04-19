@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Test colors</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            min-height: 100vh;
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test color</h1>
+
+    <div id="test-color"></div>
+
+    <script src="custom-api-wakko.js"></script>
+    <script>
+        ajaxCustomApiWakko(urlColorsCustomApiWakko, function (xhttp) {
+            let response = JSON.parse(xhttp.response);
+            testColores(response);}
+            );
+            
+        ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
+        function testColores (response) {
+            response.forEach(color => {
+                $("#test-color").append(tagColor(color.name));
+            });
+        }
+
+        function tagColor(color){
+            return `<div>
+                        <a href="#">
+                            <h1 class="btn-variant-content">${color}</h1>
+                        </a>
+                    </div>`;
+        }
+    </script>
+</body>
+</html>
