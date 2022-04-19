@@ -28,7 +28,7 @@ function functionColorsOnProductCustomApiWakko(selector,jsonColors){
             jsonColors.forEach(jsonColor=>{
                 if(jsonColor.name == selectorColor.textContent){
                     selectorColor.style.backgroundColor = jsonColor.backGround;
-                    //TODO: text-color !
+                    selectorColor.style.color = jsonColor.color;
                 }
             })
         })
