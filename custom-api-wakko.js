@@ -69,10 +69,6 @@ function bannerWrapper(){
         // let banner = document.querySelector(".banner-wrapper");
         let categories = document.querySelectorAll(".banner-wrapper > .span6");
         if(categories.length < 3){
-            categories.forEach(category =>{
-                category.classList.add("span4");
-                category.classList.remove("span6");
-            });
             let newCategory = `
                 <div class="span4">
                     <div class="textbanner text-center">
@@ -91,6 +87,10 @@ function bannerWrapper(){
                 </div>`;
             // TODO: Take off jQuery . jQuery is on tiendanube by default
             $(".banner-wrapper").append(newCategory);
+            categories.forEach(category =>{
+                category.classList.add("span4");
+                category.classList.remove("span6");
+            });
         }
         
     } catch (error) {
