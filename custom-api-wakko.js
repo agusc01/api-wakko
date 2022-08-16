@@ -105,7 +105,8 @@ function bannerWrapper(){
                 `
                 ;
             // TODO: Take off jQuery . jQuery is on tiendanube by default
-            $(".banner-wrapper > .span6").closest("div").insertAfter(newCategory);
+            $(".banner-wrapper > .span6").closest("div").append(newCategory);
+            $(".banner-wrapper > .span6").closest("div").addClass("custom-banner1");
             categories.forEach(category =>{
                 category.classList.add("span4");
                 category.classList.remove("span6");
