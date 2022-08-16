@@ -66,11 +66,11 @@ function functionStayCenterPills(){
 
 function bannerWrapper(){
     try {
-        // let banner = document.querySelector(".banner-wrapper");
+        let banner = document.querySelector(".banner-wrapper");
         let categories = document.querySelectorAll(".banner-wrapper > .span6");
         if(categories.length < 3){
             let newCategory = `
-                <div class="row-fluid banner-wrapper" data-store="banner-home-categories">
+                <div class="row-fluid banner-wrapper custom-banner1" data-store="banner-home-categories">
                     <div class="span4">
                         <div class="textbanner text-center">
                             <a class="banner-with-text-link" href="https://wakko.mitiendanube.com/bazar/" title="Bazar" aria-label="Bazar">
@@ -106,7 +106,7 @@ function bannerWrapper(){
                 ;
             // TODO: Take off jQuery . jQuery is on tiendanube by default
             $(".banner-wrapper > .span6").closest("div.container-fluid").append(newCategory);
-            $(".banner-wrapper > .span6").closest("div.container-fluid").addClass("custom-banner1");
+            banner.classList.add("custom-banner1");
             categories.forEach(category =>{
                 category.classList.add("span4");
                 category.classList.remove("span6");
