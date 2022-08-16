@@ -8,4 +8,7 @@ span.checkbox span.checkbox-color{border:1.5px solid black}
 
 .custom-banner1{display:flex;justify-content: center;}
 
+/*
+al final no le sacamos el display:flex y se ven 2 por fila
 @media (max-width:767px){.custom-banner1{display:block;}}
+*/
