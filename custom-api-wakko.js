@@ -90,7 +90,7 @@ function bannerWrapper(){
                         <div class="textbanner text-center">
                             <a class="banner-with-text-link" href="https://wakko.mitiendanube.com/estancia-don-juan/" title="Estancia Don Juan" aria-label="Estancia Don Juan">
                                 <div class="textbanner-image overlay">
-                                    <img class="textbanner-image-background lazyautosizes lazyload blur-up-big" src="https://agusc01.github.io/api-wakko/assets/images/banner/4432.jpg" data-sizes="auto" data-expand="-10" alt="Estancia Don Juan"> 
+                                    <img class="textbanner-image-background lazyautosizes lazyload blur-up-big" src="https://agusc01.github.io/api-wakko/assets/images/banner/721.jpg" data-sizes="auto" data-expand="-10" alt="Estancia Don Juan"> 
                                     <div class="placeholder-shine"></div>
                                 </div>
                                 <div class="textbanner-text">
