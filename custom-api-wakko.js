@@ -147,7 +147,7 @@ function functionSeeSizes(){
                 if(cantidades > 1)
                 {
                     let href = item.parentNode.querySelector("a").href;
-                    let message = `${cantidades} ${variant}`;
+                    let message = `${cantidades} ${variant}S`;
                     let render = renderVariante(message,href);
                     item.insertAdjacentHTML("afterend", render);
                 }
