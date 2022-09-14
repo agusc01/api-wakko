@@ -5,6 +5,7 @@ let urlColorsCustomApiWakko = 'https://agusc01.github.io/api-wakko/colors-custom
 ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
 functionStayCenterPills();
 bannerWrapper();
+functionSeeSizes();
  
 function ajaxCustomApiWakko(url, cFunction) {
     const xhttp = new XMLHttpRequest();
@@ -116,4 +117,45 @@ function bannerWrapper(){
     } catch (error) {
         console.warn(error);
     }
+}
+
+function renderVariante (mensaje,href)
+{
+    return  `
+    <div class="js-color-variant-available-1 js-color-variant-active" data-value="variation_1" data-option="0">
+        <div class="item-colors">
+            <a href="${href}" class="item-colors-bullet item-colors-bullet-text visible-phone">${mensaje}</a>
+                <div class="hidden-phone">
+                    <a href="${href}" class="item-colors-bullet item-colors-bullet-text" title="">${mensaje}</a>
+                </div>
+        </div>
+    </div>`
+};
+
+function functionSeeSizes(){
+
+    let items = document.querySelectorAll(".js-item-variants");
+    items.forEach(item=> 
+    {
+        try
+        {
+            let variant = item.querySelector(".variant-label").innerText;  
+            variant = variant.toLowerCase().trim();
+            if(variant == "tamaño")
+            {
+                let cantidades = item.querySelectorAll("form select option").length;
+                if(cantidades > 1)
+                {
+                    let href = item.parentNode.querySelector("a").href;
+                    let message = `${cantidades} ${variant}`;
+                    let render = renderVariante(message,href);
+                    item.insertAdjacentHTML("afterend", render);
+                }
+            }
+        }
+        catch (error) 
+        {
+            console.warn(error);
+        }
+    });
 }
