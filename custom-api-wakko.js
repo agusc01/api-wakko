@@ -6,6 +6,7 @@ ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
 functionStayCenterPills();
 bannerWrapper();
 functionSeeSizes();
+document.addEventListener('scroll',functionSeeSizes);
  
 function ajaxCustomApiWakko(url, cFunction) {
     const xhttp = new XMLHttpRequest();
