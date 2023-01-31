@@ -1,77 +1,83 @@
-console.log("Working Custom API Wakko ! ...");
+console.log('Working Custom API Wakko ! ...');
 
-let urlColorsCustomApiWakko = 'https://agusc01.github.io/api-wakko/colors-custom-api-wakko.json'
+let urlColorsCustomApiWakko = 'https://agusc01.github.io/api-wakko/colors-custom-api-wakko.json';
 // let urlColorsCustomApiWakko = './colors-custom-api-wakko.json'
 ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
-functionStayCenterPills();
-bannerWrapper();
-functionSeeSizes();
-document.addEventListener('scroll',functionSeeSizes);
- 
+
+// ? You have to use when you use "silent" interface
+// ? Now, we are using "rio" interface
+// functionStayCenterPills();
+// bannerWrapper();
+// functionSeeSizes();
+// document.addEventListener('scroll', functionSeeSizes);
+
 function ajaxCustomApiWakko(url, cFunction) {
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {cFunction(this);}
-    xhttp.open("GET", url);
-    xhttp.send();
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function () {
+    cFunction(this);
+  };
+  xhttp.open('GET', url);
+  xhttp.send();
 }
 
 function functionColorsCustomApiWakko(xhttp) {
-    let response = JSON.parse(xhttp.response);
-    
-    functionColorsOnProductCustomApiWakko("div a .btn-variant-content",response );
+  let response = JSON.parse(xhttp.response);
 
-    functionColorsOnFiltersCustomApiWakko("[data-store='filters-group'] label span.checkbox",response );
+  functionColorsOnProductCustomApiWakko('div a .btn-variant-content', response);
+
+  functionColorsOnFiltersCustomApiWakko("[data-store='filters-group'] label span.checkbox", response);
 }
 
-function functionColorsOnProductCustomApiWakko(selector,jsonColors){
-    try {
-        let selectorColors = document.querySelectorAll(selector);
-        selectorColors.forEach(selectorColor=>{
-            jsonColors.forEach(jsonColor=>{
-                if(jsonColor.name == selectorColor.textContent){
-                    selectorColor.style.backgroundColor = jsonColor.backGround;
-                    selectorColor.style.color = jsonColor.color;
-                }
-            })
-        })
-    } catch (error) {
-        console.warn(error)
-    }
+function functionColorsOnProductCustomApiWakko(selector, jsonColors) {
+  try {
+    let selectorColors = document.querySelectorAll(selector);
+    selectorColors.forEach((selectorColor) => {
+      jsonColors.forEach((jsonColor) => {
+        if (jsonColor.name == selectorColor.textContent) {
+          selectorColor.style.backgroundColor = jsonColor.backGround;
+          selectorColor.style.color = jsonColor.color;
+        }
+      });
+    });
+  } catch (error) {
+    console.warn(error);
+  }
 }
 
-function functionColorsOnFiltersCustomApiWakko(selector,jsonColors){
-    try {
-        let selectorColors = document.querySelectorAll(selector);
-        selectorColors.forEach(selectorColor=>{
-            jsonColors.forEach(jsonColor=>{
-                if(jsonColor.name == selectorColor.innerText.split(" (")[0]){
-                    let span =  document.createElement("span");
-                    span.classList.add("checkbox-color");
-                    span.style.backgroundColor = jsonColor.backGround;
-                    selectorColor.append(span);
-                }
-            })
-        })
-    } catch (error) {
-        console.warn(error)
-    }
+function functionColorsOnFiltersCustomApiWakko(selector, jsonColors) {
+  try {
+    let selectorColors = document.querySelectorAll(selector);
+    selectorColors.forEach((selectorColor) => {
+      jsonColors.forEach((jsonColor) => {
+        if (jsonColor.name == selectorColor.innerText.split(' (')[0]) {
+          let span = document.createElement('span');
+          span.classList.add('checkbox-color');
+          span.style.backgroundColor = jsonColor.backGround;
+          selectorColor.append(span);
+        }
+      });
+    });
+  } catch (error) {
+    console.warn(error);
+  }
 }
 
-function functionStayCenterPills(){
-    try {
-        document.querySelector(".pills-container").classList.remove("text-left-xs")
-    } catch (error) {
-        console.warn(error)
-    }
+// ! Not use with "rio" interface. You could use with "silent" interface or a similar interface
+/*
+function functionStayCenterPills() {
+  try {
+    document.querySelector('.pills-container').classList.remove('text-left-xs');
+  } catch (error) {
+    console.warn(error);
+  }
 }
 
-
-function bannerWrapper(){
-    try {
-        let banner = document.querySelector(".banner-wrapper");
-        let categories = document.querySelectorAll(".banner-wrapper > .span6");
-        if(categories.length < 3){
-            let newCategory = `
+function bannerWrapper() {
+  try {
+    let banner = document.querySelector('.banner-wrapper');
+    let categories = document.querySelectorAll('.banner-wrapper > .span6');
+    if (categories.length < 3) {
+      let newCategory = `
                 <div class="row-fluid banner-wrapper custom-banner1" data-store="banner-home-categories">
                     <div class="span4">
                         <div class="textbanner text-center">
@@ -104,25 +110,22 @@ function bannerWrapper(){
                         </div>
                     </div>    
                 </div>               
-                `
-                ;
-            // TODO: Take off jQuery . jQuery is on tiendanube by default
-            $(".banner-wrapper > .span6").closest("div.container-fluid").append(newCategory);
-            banner.classList.add("custom-banner1");
-            categories.forEach(category =>{
-                category.classList.add("span4");
-                category.classList.remove("span6");
-            });
-        }
-        
-    } catch (error) {
-        console.warn(error);
+                `;
+      // TODO: Take off jQuery . jQuery is on tiendanube by default
+      $('.banner-wrapper > .span6').closest('div.container-fluid').append(newCategory);
+      banner.classList.add('custom-banner1');
+      categories.forEach((category) => {
+        category.classList.add('span4');
+        category.classList.remove('span6');
+      });
     }
+  } catch (error) {
+    console.warn(error);
+  }
 }
 
-function renderVariante (mensaje,href)
-{
-    return  `
+function renderVariante(mensaje, href) {
+  return `
     <div class="js-color-variant-available-1 js-color-variant-active" data-value="variation_1" data-option="0">
         <div class="item-colors">
             <a href="${href}" class="item-colors-bullet item-colors-bullet-text visible-phone">${mensaje}</a>
@@ -130,33 +133,28 @@ function renderVariante (mensaje,href)
                     <a href="${href}" class="item-colors-bullet item-colors-bullet-text" title="">${mensaje}</a>
                 </div>
         </div>
-    </div>`
-};
-
-function functionSeeSizes(){
-
-    let items = document.querySelectorAll(".js-item-variants");
-    items.forEach(item=> 
-    {
-        try
-        {
-            let variant = item.querySelector(".variant-label").innerText;  
-            variant = variant.toLowerCase().trim();
-            if(variant == "tamaño")
-            {
-                let cantidades = item.querySelectorAll("form select option").length;
-                if(cantidades > 1)
-                {
-                    let href = item.parentNode.querySelector("a").href;
-                    let message = `${cantidades} ${variant}S`;
-                    let render = renderVariante(message,href);
-                    item.insertAdjacentHTML("afterend", render);
-                }
-            }
-        }
-        catch (error) 
-        {
-            console.warn(error);
-        }
-    });
+    </div>`;
 }
+
+
+function functionSeeSizes() {
+  let items = document.querySelectorAll('.js-item-variants');
+  items.forEach((item) => {
+    try {
+      let variant = item.querySelector('.variant-label').innerText;
+      variant = variant.toLowerCase().trim();
+      if (variant == 'tamaño') {
+        let cantidades = item.querySelectorAll('form select option').length;
+        if (cantidades > 1) {
+          let href = item.parentNode.querySelector('a').href;
+          let message = `${cantidades} ${variant}S`;
+          let render = renderVariante(message, href);
+          item.insertAdjacentHTML('afterend', render);
+        }
+      }
+    } catch (error) {
+      console.warn(error);
+    }
+  });
+}
+*/
