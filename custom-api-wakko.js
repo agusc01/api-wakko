@@ -3,6 +3,7 @@ console.log('Working Custom API Wakko ! ...');
 let urlColorsCustomApiWakko = 'https://agusc01.github.io/api-wakko/colors-custom-api-wakko.json';
 // let urlColorsCustomApiWakko = './colors-custom-api-wakko.json'
 ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
+functionFAQOnProduct();
 
 // ? You have to use when you use "silent" interface
 // ? Now, we are using "rio" interface
@@ -10,6 +11,17 @@ ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
 // bannerWrapper();
 // functionSeeSizes();
 // document.addEventListener('scroll', functionSeeSizes);
+
+function functionFAQOnProduct() {
+  try {
+    let container = document.querySelector('.product-description.user-content');
+    if (container) {
+      container.innerHTML += `<p><a href="/preguntas-frecuentes" target="_blank" style="text-decoration:underline"><strong>PREGUNTAS FRECUENTES</strong></a><br><br> # Muchas Gracias por confiar en nosotros.</p>`;
+    }
+  } catch (error) {
+    console.warn(error);
+  }
+}
 
 function ajaxCustomApiWakko(url, cFunction) {
   const xhttp = new XMLHttpRequest();
