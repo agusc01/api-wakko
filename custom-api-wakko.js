@@ -43,13 +43,16 @@ function functionColorsCustomApiWakko(xhttp) {
 function functionColorsOnProductCustomApiWakko(selector, jsonColors) {
   try {
     let selectorColors = document.querySelectorAll(selector);
+    let lenghtColours = jsonColors.length;
     selectorColors.forEach((selectorColor) => {
-      jsonColors.forEach((jsonColor) => {
-        if (jsonColor.name == selectorColor.textContent) {
-          selectorColor.style.backgroundColor = jsonColor.backGround;
-          selectorColor.style.color = jsonColor.color;
+      for (let i = 0; i < lenghtColours; i++) {
+        if (jsonColors[i].name == selectorColor.textContent) {
+          let link = selectorColor.parentElemnt;
+          link.style.backgroundColor = jsonColor[i].backGround;
+          link.style.color = jsonColor[i].color;
+          break;
         }
-      });
+      }
     });
   } catch (error) {
     console.warn(error);

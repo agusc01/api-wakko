@@ -1,192 +1,192 @@
 [
-    {
-        "name":"Ruby.",
-        "backGround":"#A80000",
-        "color":"#eee"        
-    },
-    {
-        "name":"Caramelo.",
-        "backGround":"#DBA126",
-        "color":"#eee"        
-    },
-    {
-        "name":"Habano.",
-        "backGround":"#6E2611",
-        "color":"#eee"        
-    },
-    {
-        "name":"Ivory.",
-        "backGround":"#F9FFDB",
-        "color":"#333"        
-    },
-    {
-        "name":"Rojo.",
-        "backGround":"#e00d16",
-        "color":"#eee"       
-    },
-    {
-        "name":"Green.",
-        "backGround":"#067336",
-        "color":"#111"       
-    },
-    {
-        "name":"Verde.",
-        "backGround":"#009d89",
-        "color":"#333"       
-    },
-    {
-        "name":"Aqua.",
-        "backGround":"#6BD1CF",
-        "color":"#333"       
-    },
-    {
-        "name":"Verde oliva.",
-        "backGround":"#8D8F0A",
-        "color":"#111"       
-    },
-    {
-        "name":"Turquesa.",
-        "backGround":"#0E8CCF",
-        "color":"#333"       
-    },
-    {
-        "name":"Blanco.",
-        "backGround":"#ffffff",
-        "color":"#333"       
-    },
-    {
-        "name":"Negro.",
-        "backGround":"#000000",
-        "color":"#eee"       
-    },
-    {
-        "name":"Amarillo.",
-        "backGround":"#FFDF57",
-        "color":"#333"       
-    },
-    {
-        "name":"Verde manzana.",
-        "backGround":"#B9D943",
-        "color":"#333"       
-    },
-    {
-        "name":"Salmon.",
-        "backGround":"#E96B6E",
-        "color":"#ddd"       
-    },
-    {
-        "name":"Palta.",
-        "backGround":"#68a97f",
-        "color":"#333"       
-    },
-    {
-        "name":"Rosa.",
-        "backGround":"#FFE0D9",
-        "color":"#333"       
-    },
-    {
-        "name":"Aqua Antique.",
-        "backGround":"#B3F2D8",
-        "color":"#333"       
-    },
-    {
-        "name":"Azul Traslucido.",
-        "backGround":"#ffffff",
-        "color":"#333"       
-    },
-    {
-        "name":"Borravino.",
-        "backGround":"#ffffff",
-        "color":"#333"       
-    },
-    {
-        "name":"Fucsia.",
-        "backGround":"#F74C80",
-        "color":"#ddd"       
-    },
-    {
-        "name":"Violeta.",
-        "backGround":"#5A4DC9",
-        "color":"#ddd"       
-    },
-    {
-        "name":"Natural.",
-        "backGround":"#EDE1C7",
-        "color":"#333"       
-    },
-    {
-        "name":"Lila.",
-        "backGround":"#CAC7F0",
-        "color":"#333"       
-    },
-    {
-        "name":"Aluminio.",
-        "backGround":"#C5C6C0",
-        "color":"#333"       
-    },
-    {
-        "name":"Pewter.",
-        "backGround":"#999984",
-        "color":"#fff"       
-    },
-    {
-        "name":"Niquel.",
-        "backGround":"#F6F7F2",
-        "color":"#333"       
-    },
-    {
-        "name":"BronceViejo.",
-        "backGround":"#C2AE1F",
-        "color":"#333"       
-    },
-    {
-        "name":"Cristal.",
-        "backGround":"#EDE1C7",
-        "color":"#333"       
-    },
-    {
-        "name":"Gris.",
-        "backGround":"#C4C4C4",
-        "color":"#333"       
-    },
-    {
-        "name":"Beige.",
-        "backGround":"#E6D6A1",
-        "color":"#333"       
-    },
-    {
-        "name":"Oxido.",
-        "backGround":"#B55818",
-        "color":"#ddd"       
-    },
-    {
-        "name":"Blanco Jaspeado.",
-        "backGround":"#FFFFFF",
-        "color":"#333"       
-    },
-    {
-        "name":"Beige Jaspeado.",
-        "backGround":"#FFD6A6",
-        "color":"#333"       
-    },
-    {
-        "name":"Cemento.",
-        "backGround":"#cccccc",
-        "color":"#333"       
-    },
-    {
-        "name":"Azul Jean.",
-        "backGround":"#2E9BFF",
-        "color":"#333"       
-    },
-    {
-        "name":"Vison.",
-        "backGround":"#A18157",
-        "color":"#ddd"       
-    },
-    {
-        "name":"Marron Jaspeado.",
-        "backGround":"#9C420C",
-        "color":"#ddd"       
-    }
+  {
+    "name": "Ruby.",
+    "backGround": "#A80000",
+    "color": "#eee"
+  },
+  {
+    "name": "Caramelo.",
+    "backGround": "#DBA126",
+    "color": "#eee"
+  },
+  {
+    "name": "Habano.",
+    "backGround": "#6E2611",
+    "color": "#eee"
+  },
+  {
+    "name": "Ivory.",
+    "backGround": "#F9FFDB",
+    "color": "#333"
+  },
+  {
+    "name": "Rojo.",
+    "backGround": "#e00d16",
+    "color": "#eee"
+  },
+  {
+    "name": "Green.",
+    "backGround": "#067336",
+    "color": "#111"
+  },
+  {
+    "name": "Verde.",
+    "backGround": "#009d89",
+    "color": "#333"
+  },
+  {
+    "name": "Aqua.",
+    "backGround": "#6BD1CF",
+    "color": "#333"
+  },
+  {
+    "name": "Verde oliva.",
+    "backGround": "#8D8F0A",
+    "color": "#111"
+  },
+  {
+    "name": "Turquesa.",
+    "backGround": "#0E8CCF",
+    "color": "#111"
+  },
+  {
+    "name": "Blanco.",
+    "backGround": "#ffffff",
+    "color": "#333"
+  },
+  {
+    "name": "Negro.",
+    "backGround": "#000000",
+    "color": "#eee"
+  },
+  {
+    "name": "Amarillo.",
+    "backGround": "#FFDF57",
+    "color": "#333"
+  },
+  {
+    "name": "Verde manzana.",
+    "backGround": "#B9D943",
+    "color": "#333"
+  },
+  {
+    "name": "Salmon.",
+    "backGround": "#E96B6E",
+    "color": "#ddd"
+  },
+  {
+    "name": "Palta.",
+    "backGround": "#68a97f",
+    "color": "#333"
+  },
+  {
+    "name": "Rosa.",
+    "backGround": "#FFE0D9",
+    "color": "#333"
+  },
+  {
+    "name": "Aqua Antique.",
+    "backGround": "#B3F2D8",
+    "color": "#333"
+  },
+  {
+    "name": "Azul Traslucido.",
+    "backGround": "#ffffff",
+    "color": "#333"
+  },
+  {
+    "name": "Borravino.",
+    "backGround": "#ffffff",
+    "color": "#333"
+  },
+  {
+    "name": "Fucsia.",
+    "backGround": "#F74C80",
+    "color": "#ddd"
+  },
+  {
+    "name": "Violeta.",
+    "backGround": "#5A4DC9",
+    "color": "#ddd"
+  },
+  {
+    "name": "Natural.",
+    "backGround": "#EDE1C7",
+    "color": "#333"
+  },
+  {
+    "name": "Lila.",
+    "backGround": "#CAC7F0",
+    "color": "#333"
+  },
+  {
+    "name": "Aluminio.",
+    "backGround": "#C5C6C0",
+    "color": "#333"
+  },
+  {
+    "name": "Pewter.",
+    "backGround": "#999984",
+    "color": "#fff"
+  },
+  {
+    "name": "Niquel.",
+    "backGround": "#F6F7F2",
+    "color": "#333"
+  },
+  {
+    "name": "BronceViejo.",
+    "backGround": "#C2AE1F",
+    "color": "#333"
+  },
+  {
+    "name": "Cristal.",
+    "backGround": "#EDE1C7",
+    "color": "#333"
+  },
+  {
+    "name": "Gris.",
+    "backGround": "#C4C4C4",
+    "color": "#333"
+  },
+  {
+    "name": "Beige.",
+    "backGround": "#E6D6A1",
+    "color": "#333"
+  },
+  {
+    "name": "Oxido.",
+    "backGround": "#B55818",
+    "color": "#ddd"
+  },
+  {
+    "name": "Blanco Jaspeado.",
+    "backGround": "#FFFFFF",
+    "color": "#333"
+  },
+  {
+    "name": "Beige Jaspeado.",
+    "backGround": "#FFD6A6",
+    "color": "#333"
+  },
+  {
+    "name": "Cemento.",
+    "backGround": "#cccccc",
+    "color": "#333"
+  },
+  {
+    "name": "Azul Jean.",
+    "backGround": "#2E9BFF",
+    "color": "#333"
+  },
+  {
+    "name": "Vison.",
+    "backGround": "#A18157",
+    "color": "#ddd"
+  },
+  {
+    "name": "Marron Jaspeado.",
+    "backGround": "#9C420C",
+    "color": "#ddd"
+  }
 ]
