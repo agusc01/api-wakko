@@ -6,6 +6,7 @@ let urlColorsCustomApiWakko = 'https://agusc01.github.io/api-wakko/colors-custom
 // let urlColorsCustomApiWakko = './colors-custom-api-wakko.json'
 let lastScroll = 0;
 const timeToUpdateJsonColorsAfterScrollingDonw = 2000;
+let jsonColors = null;
 
 // ! Functions
 ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
@@ -65,20 +66,23 @@ function functionFAQOnProduct() {
 }
 
 function ajaxCustomApiWakko(url, cFunction) {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function () {
-    cFunction(this);
-  };
-  xhttp.open('GET', url);
-  xhttp.send();
+  if (jsonColors == null) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+      jsonColors = JSON.parse(this.response);
+      cFunction(jsonColors);
+    };
+    xhttp.open('GET', url);
+    xhttp.send();
+  } else {
+    cFunction(jsonColors);
+  }
 }
 
 function functionColorsCustomApiWakko(xhttp) {
-  let response = JSON.parse(xhttp.response);
+  functionColorsOnProductCustomApiWakko('div a .btn-variant-content', xhttp);
 
-  functionColorsOnProductCustomApiWakko('div a .btn-variant-content', response);
-
-  functionColorsOnFiltersCustomApiWakko("[data-store='filters-group'] label span.checkbox", response);
+  functionColorsOnFiltersCustomApiWakko("[data-store='filters-group'] label span.checkbox", xhttp);
 }
 
 function functionColorsOnProductCustomApiWakko(selector, jsonColors) {
