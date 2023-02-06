@@ -47,9 +47,9 @@ function functionColorsOnProductCustomApiWakko(selector, jsonColors) {
     selectorColors.forEach((selectorColor) => {
       for (let i = 0; i < lenghtColours; i++) {
         if (jsonColors[i].name == selectorColor.textContent) {
-          let link = selectorColor.parentElemnt;
-          link.style.backgroundColor = jsonColor[i].backGround;
-          link.style.color = jsonColor[i].color;
+          let link = selectorColor.parentElement;
+          link.style.backgroundColor = jsonColors[i].backGround;
+          link.style.color = jsonColors[i].color;
           break;
         }
       }
