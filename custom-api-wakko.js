@@ -7,6 +7,7 @@ let urlColorsCustomApiWakko = 'https://agusc01.github.io/api-wakko/colors-custom
 let lastScroll = 0;
 const timeToUpdateJsonColorsAfterScrollingDonw = 2000;
 let jsonColors = null;
+let onceColorsOnFilter = true;
 
 // ! Functions
 ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
@@ -82,7 +83,10 @@ function ajaxCustomApiWakko(url, cFunction) {
 function functionColorsCustomApiWakko(xhttp) {
   functionColorsOnProductCustomApiWakko('div a .btn-variant-content', xhttp);
 
+  if (onceColorsOnFilter) {
   functionColorsOnFiltersCustomApiWakko("[data-store='filters-group'] label span.checkbox", xhttp);
+    onceColorsOnFilter = false;
+  }
 }
 
 function functionColorsOnProductCustomApiWakko(selector, jsonColors) {
