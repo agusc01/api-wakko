@@ -8,6 +8,7 @@ let lastScroll = 0;
 const timeToUpdateJsonColorsAfterScrollingDonw = 2000;
 let jsonColors = null;
 let onceColorsOnFilter = true;
+let lastQuantityOfProducts = 0;
 
 // ! Functions
 ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
@@ -18,7 +19,7 @@ functionFAQOnProduct();
 window.addEventListener(
   'scroll',
   functionDebounce(() => {
-    if (functionScrollDetect()) {
+    if (functionIncreaseQuantityOfProducts() && functionScrollDownDetect()) {
       ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
       console.log('update colours');
       // console.log('down');
@@ -29,20 +30,31 @@ window.addEventListener(
   }, timeToUpdateJsonColorsAfterScrollingDonw)
 );
 
-//! Function's declarations
+// ! Function's declarations
 
-function functionScrollDetect() {
+function functionIncreaseQuantityOfProducts() {
+	let now = document.querySelectorAll(".js-item-product").length;
+	if(now > lastQuantityOfProducts) {
+		lastQuantityOfProducts = now ;
+		return true;
+	}
+	return false;
+}
+
+function functionScrollDownDetect() {
   let currentScroll = document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
 
   if (currentScroll > 0 && lastScroll <= currentScroll) {
     lastScroll = currentScroll;
     // ? true when it's down
     return true;
-  } else {
-    lastScroll = currentScroll;
-    // ? false when it's up
-    return false;
   }
+  //  else {
+  //   lastScroll = currentScroll;
+  //   // ? false when it's up
+  //   return false;
+  // }
+  return false;
 }
 
 function functionDebounce(callback, wait) {
