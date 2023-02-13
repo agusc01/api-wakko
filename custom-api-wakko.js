@@ -21,7 +21,8 @@ window.addEventListener(
   functionDebounce(() => {
     if (functionIncreaseQuantityOfProducts() && functionScrollDownDetect()) {
       ajaxCustomApiWakko(urlColorsCustomApiWakko, functionColorsCustomApiWakko);
-      console.log('update colours');
+      functionRemoveAskPrice();
+      console.log('update colours & ask price remove');
       // console.log('down');
     }
     // else {
@@ -31,6 +32,16 @@ window.addEventListener(
 );
 
 // ! Function's declarations
+
+function functionRemoveAskPrice() {
+	let products = document.querySelectorAll("input.js-addtocart")
+	products.forEach(product => {
+		if(product.value.toLowerCase() == "consultar precio") {
+			product.style.display = "none"
+		}
+	})
+}
+
 
 function functionIncreaseQuantityOfProducts() {
 	let now = document.querySelectorAll(".js-item-product").length;
