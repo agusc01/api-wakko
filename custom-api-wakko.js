@@ -33,23 +33,22 @@ window.addEventListener(
 // ! Function's declarations
 
 function functionRemoveAskPriceAndWithoutStock() {
-	let products = document.querySelectorAll("input.js-addtocart")
-	products.forEach(product => {
-		let string = product.value.toLowerCase();
-		if(string == "consultar precio" || string == "sin stock") {
-			product.style.display = "none"
-		}
-	})
+  let products = document.querySelectorAll('input.js-addtocart');
+  products.forEach((product) => {
+    let string = product.value.toLowerCase();
+    if (string == 'consultar precio' || string == 'sin stock') {
+      product.style.display = 'none';
+    }
+  });
 }
 
-
 function functionIncreaseQuantityOfProducts() {
-	let now = document.querySelectorAll(".js-item-product").length;
-	if(now > lastQuantityOfProducts) {
-		lastQuantityOfProducts = now ;
-		return true;
-	}
-	return false;
+  let now = document.querySelectorAll('.js-item-product').length;
+  if (now > lastQuantityOfProducts) {
+    lastQuantityOfProducts = now;
+    return true;
+  }
+  return false;
 }
 
 function functionScrollDownDetect() {
@@ -101,14 +100,14 @@ function ajaxCustomApiWakko(url, cFunction) {
   } else {
     cFunction(jsonColors);
   }
-  functionRemoveAskPriceAndWithoutStock();
+  // functionRemoveAskPriceAndWithoutStock();
 }
 
 function functionColorsCustomApiWakko(xhttp) {
   functionColorsOnProductCustomApiWakko('div a .btn-variant-content', xhttp);
 
   if (onceColorsOnFilter) {
-  functionColorsOnFiltersCustomApiWakko("[data-store='filters-group'] label span.checkbox", xhttp);
+    functionColorsOnFiltersCustomApiWakko("[data-store='filters-group'] label span.checkbox", xhttp);
     onceColorsOnFilter = false;
   }
 }
